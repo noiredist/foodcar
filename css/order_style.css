@@ -1,0 +1,363 @@
+/* Globel */
+*{
+	position: relative;
+	box-sizing: border-box;
+	font-family: PingFangTC-Regular;
+
+}
+html{
+	height: 100%;
+
+}
+body{
+	font-family: arial;
+	height: 100%;
+}
+a {
+    color: #4A4A4A ;
+    text-decoration: none;
+}
+a:hover {
+    color: #4A4A4A;
+    text-decoration: none;
+}
+.wrapper{
+	height: 100%;
+}
+.main_bg{
+	background: #F5F5F5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    z-index: -1;
+}
+
+/* header */
+.header{
+	position: fixed;
+	display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+	top: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #FFEB64;
+	z-index: 10;
+	padding: 10px;
+	z-index: 11;
+}
+.title{
+	width: 100%;
+	text-align: center;
+	line-height:40px;
+	font-size: 120%;
+}
+
+.main_info{
+}
+.restInfo{
+	width: 100%;
+	padding: 2vw 2vw 2vw 2vw ;
+	background-color: #fff;
+	border-bottom: #FFEB64 1px solid;
+}
+#restInfo_name{
+	width: 100%;
+	text-align: center;
+	color: #000000;
+	line-height: 4vh;
+
+	/* 讓過長溢出的字省略變 ...  */
+	display : block;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+
+.space{
+	height: 60px;
+}
+.space2{
+	height: 70px;
+}
+
+/* orderinfo */
+.progress_box{
+	width: 100%;
+	text-align: center;
+	/*height: 100px;*/
+}
+.progress_bar{
+	width: 80%;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	/*height: 20px;*/
+}
+.progress_bar td{
+	text-align: center;
+	width: 25%;
+	height: 35px;
+	border-spacing: 0px; 
+	border: 0px;
+	font-size: 80%;
+
+}
+.progress_light{
+	content: '';
+    position: absolute;
+    background-color: #FFEB64;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+    border-radius: 50px;
+    height: 18px;
+    width: 18px;
+    z-index: 10;
+}
+.progress_bar td:last-child .progress_light{
+	content: '';
+    position: absolute;
+    background-color: #a7a7a7;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+    border-radius: 50px;
+    height: 18px;
+    width: 18px;
+    z-index: 10;
+}
+.progress_line{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(-50%,-50%);
+	border-top: #FFEB64 3px solid;
+}
+.progress_bar td:last-child .progress_line{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(-50%,-50%);
+	border-top: #a7a7a7 3px dashed;
+}
+/*.progress_bar td:first-child .progress_line{
+	width: 50%;
+	height: 3px;
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	transform: translate(0%,-50%);
+	background-color: #FFEB64;
+}
+.progress_bar td:last-child .progress_line{
+	width: 50%;
+	height: 3px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translate(0%,-50%);
+	background-color: #FFEB64;
+}*/
+.orderinfo{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 0vh 0vw 1vh 0vw; 
+}
+.orderinfo_title{
+	text-align: center;
+}
+.orderinfo_number{
+	text-align: center;
+	font-size: 80px;
+	font-weight: 500;
+	color: #FF8A05;
+}
+#arrived{
+	color: #7F7F7F;
+}
+.check_setting{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 0vh 0vw 1vh 0vw; 
+}
+.setting_title{
+	display: inline-block;
+	width: 30vw;
+}
+.action_arrow1{
+    content: '';
+    position: absolute;
+    top: 2vh;
+	right: 20px;
+	transform: translate(-50%,-50%);
+	border-color: #a9a9a9;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    height: 13px;
+    width: 13px;
+}
+.action_arrow2{
+    content: '';
+    position: absolute;
+    top: 35%;
+	right: 20px;
+	transform: translate(-50%,-50%);
+	border-color: #a9a9a9;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+    height: 13px;
+    width: 13px;
+}
+.content{
+	display: inline-block;
+	/*float: left;*/
+	/*padding-right: 25px;*/
+}
+.btn_cancel{
+	display: inline-block;
+	float: right;
+	/*padding-right: 25px;*/
+    height: 30px;
+    line-height:20px;
+    margin-top: -3px;
+    background-color: rgba(255,255,255,0);
+}
+.btn-checkcancel{
+    background-color: #FFEB64;
+}
+
+/* dish_list */
+.dish_list{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 1vh 0vw; 
+	border-radius: 5px;
+	border: #d9d9d9 1px solid;
+}
+.dish_list li{
+	color: #7F7F7F;
+	font-size: 85%;
+	line-height: 24px;
+}
+.dish_list li:nth-last-child(2) {
+	color: #000;
+	font-size: 85%;
+	line-height: 45px;
+	border-top: #FFEB64 1px solid;
+}
+.dish_list .list_restname{
+	display: inline-block;
+	color: #000;
+}
+.list_name{
+    width: 66%;
+    display: inline-block;
+}
+.list_num{
+    width: 12%;
+    display: inline-block;
+}
+
+.price{
+    width: 20%;
+	display: inline-block;
+	float: right;
+	color: #7F7F7F;
+	font-size: 85%;
+	line-height: 25px;
+    text-align: right;
+}
+.calc_price{
+	display: inline-block;
+	float: right;
+	color: #000;
+	font-size: 85%;
+	line-height: 45px;
+}
+
+.discount{
+	display: inline-block;
+	padding-left: 5vw;
+	color: #EF6700;
+}
+
+.total_price{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 1vh 0vw 1vh 0vw; 
+}
+.totalprice_title{
+	display: inline-block;
+	font-size: 20px;
+}
+.totalprice_money{
+	display: inline-block;
+	font-size: 20px;
+	float: right;
+	color: #D0021B;
+}
+
+/* note */
+.note{
+	color: #9a9a9a;
+	width: 100%;
+    padding: 2vw 3vw 2vw 3vw;
+    margin: 0vh 0vw 1vh 0vw;
+}
+.note_title{
+	font-weight: 400;
+	color: #9a9a9a;
+	width: 100%;
+	margin: 0vh 0vw 0.5vh 0vw; 
+}
+.note_content{
+	font-weight: lighter;
+	color: #9a9a9a;
+	width: 100%;
+	font-size: 90%;
+}
+.go_home{
+/*	position: fixed;
+	bottom: 0px;*/
+	width: 100%;
+    padding: 3vh 2vw 3vh 2vw;
+    z-index: 110;
+}
+.home_buttom{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+    line-height: 40px;
+    /*margin: 3vh 2vw 3vh 2vw;*/
+	border-radius: 5px;	
+	background-color: #FFEB64;	
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+.cs_class{
+/*	position: fixed;
+	bottom: 0px;*/
+	width: 100%;
+    padding: 0vh 2vw 0vh 2vw;
+    z-index: 110;
+}
+.cs_buttom{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+    line-height: 40px;
+    /*margin: 3vh 2vw 3vh 2vw;*/
+	border-radius: 5px;	
+	background-color: #fff;	
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+

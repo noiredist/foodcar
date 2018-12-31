@@ -1,0 +1,514 @@
+/* Globel */
+*{
+	position: relative;
+	box-sizing: border-box;
+	/*font-family: Microsoft JhengHei;*/
+	font-family: PingFangTC-Regular;
+
+}
+html{
+	height: 100%;
+
+}
+body{
+	font-family: arial;
+	height: 100%;
+}
+a {
+    color: #4A4A4A ;
+    text-decoration: none;
+}
+a:hover {
+    color: #4A4A4A;
+    text-decoration: none;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none;     /* FireFox */
+  appearance: none;
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.wrapper{
+	height: 100%;
+}
+.main_bg{
+	background: #F5F5F5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    z-index: -1;
+}
+
+/* header */
+.header{
+	position: fixed;
+	display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+	top: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #FFEB64;
+	z-index: 10;
+	padding: 10px;
+}
+.payment_title{
+	width: 100%;
+	text-align: center;
+	line-height:40px;
+	font-size: 120%;
+}
+/* for close btn */
+/*.close_box{
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(0%,-50%);
+	height: 60px;
+    width: 60px;
+}
+.close{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 60px;
+    width: 60px;
+    opacity: 1;
+    z-index: 10;
+}
+.close_bar{
+	position: absolute;
+	width: 25px;
+	z-index: 100;
+	border-radius: 1.5px;
+	background-color: #FFF;
+	height: 3px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.bar1{
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+.bar2{
+	transform: translate(-50%,-50%) rotate(-45deg);
+}*/
+
+
+.main_info{
+}
+.restInfo{
+	width: 100%;
+	padding: 2vw 2vw 2vw 2vw ;
+	background-color: #fff;
+	border-bottom: #FFEB64 1px solid;
+}
+#restInfo_name{
+	width: 100%;
+	text-align: center;
+	color: #000000;
+	line-height: 4vh;
+
+	/* 讓過長溢出的字省略變 ...  */
+	display : block;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+
+.space{
+	height: 60px;
+}
+.space2{
+	height: 70px;
+}
+
+/* setting */
+.payway_setting{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	border-bottom: #e9e9e9 1px solid;
+}
+.invoic_setting{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	border-top: #e9e9e9 1px solid;
+}
+.action_arrow{
+    content: '';
+    position: absolute;
+    top: 35%;
+	right: 20px;
+	transform: translate(-50%,-50%);
+	border-color: #a9a9a9;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+    height: 13px;
+    width: 13px;
+}
+.payway{
+	display: inline-block;
+	float: right;
+	padding-right: 25px;
+}
+.visa{
+	top: 5px;
+	height: 13px;
+	display: inline-block;
+	float: right;
+	padding-right: 35px;
+}
+
+.check_setting{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 0vh 0vw 1vh 0vw; 
+}
+
+.voice_setting{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 1vh 0vw 1vh 0vw; 
+}
+
+.setting_title{
+	display: inline-block;
+	width: 25vw;
+}
+.content{
+	display: inline-block;
+	/*float: left;*/
+	/*padding-right: 25px;*/
+}
+
+
+/* dish_list */
+.dish_list{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 0vh 0vw 1vh 0vw; 
+}
+.dish_list li{
+	color: #7F7F7F;
+	font-size: 85%;
+	line-height: 30px;
+}
+/*.dish_list li:nth-last-child(3) {
+	background-color: #FFFCE7;
+	text-align: center;
+	color: #EF6700;
+}*/
+.dish_list li:nth-last-child(2) {
+	color: #000;
+	font-size: 85%;
+	line-height: 45px;
+	border-top: #FFEB64 1px solid;
+}
+.list_name{
+    width: 70%;
+    display: inline-block;
+}
+.list_num{
+    width: 10%;
+    display: inline-block;
+}
+
+.price{
+    width: 20%;
+	display: inline-block;
+	float: right;
+	color: #7F7F7F;
+	font-size: 85%;
+	line-height: 25px;
+    text-align: right;
+}
+.calc_price{
+	display: inline-block;
+	float: right;
+	color: #000;
+	font-size: 85%;
+	line-height: 45px;
+}
+
+.discount{
+	display: inline-block;
+	padding-left: 10px;
+	color: #EF6700;
+}
+
+/* discount_list */
+.discount_box{
+	width: 100%;
+	background-color: #fff;
+	padding: 3vw 3vw 3vw 3vw;
+}
+.discount_list{
+	background-color: #FFF9CE;
+}
+.discount_box ul{
+	padding: 1vh 0vw 1vh 0vw;
+	margin: 0;
+}
+.discount_list li{
+	color: #FF8A05;
+	font-size: 85%;
+	line-height: 30px;
+	padding: 0vw 5vw 0vw 10vw ;
+}
+.discount_list li:nth-child(1){
+	/*padding: 3vw 5vw 0vw 10vw ;*/
+}
+.discount_list li:last-child{
+	/*padding: 0vw 5vw 3vw 10vw ;*/
+}
+.points{
+	padding: 8px 5px 8px 5px;
+	margin-top: 4px;
+	display: inline-block;
+	float: right;
+	color: #FF8A05;
+	font-size: 85%;
+	line-height: 0px;
+	border-radius: 20px;
+	border: #FF8A05 1px solid;
+}
+ul li.uncheck::before {
+    content: '';
+    position: absolute;
+    border: #c7c7c7 2px solid;
+    background-color: #fff;
+
+    top: 50%;
+	left: 6%;
+	transform: translate(-50%,-50%);
+    border-radius: 2px;
+    height: 18px;
+    width: 18px;
+}
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border: #FFEB64 7px solid;
+    background-color: #fff;
+
+    top: 50%;
+	left: 6%;
+	transform: translate(-50%,-50%);
+    border-radius: 2px;
+    height: 18px;
+    width: 18px;
+}
+
+.dropdown{
+	background: #fff; 
+	border-radius: 5px;
+	border: #c7c7c7 1px solid;
+}
+.dropdown-toggle{
+	width: 100%;
+    text-align: left;
+}
+.dropdown-toggle::after{
+	display: inline-block;
+	float: right;
+	position: absolute;
+	top: 50%;
+	right: 2vw;
+	transform: translate(-50%,-50%);
+
+}
+
+.offer_number input::placeholder{
+    font-size: 10pt;
+    color: #d3d3d3;
+}
+
+.btn_offer_number_check{
+	height: 40px;
+	text-align: center;
+    line-height: 40px;
+    margin: -1vh 0vw 1vh 0vw;
+	border-radius: 5px;	
+
+    border: 1px solid #FF8A05;
+}
+
+.btn_confirm{
+    background-color: #FFEB64 !important;
+}
+/*---------------*/
+.checkbox_offer_number{
+    margin-top: 10px;
+}
+.cr_title_points{
+    color: #FF8A05;
+}
+.cr_points{
+	padding: 8px 5px 8px 5px;
+	margin-top: 0px;
+	display: inline-block;
+	float: right;
+	color: #FF8A05;
+	font-size: 85%;
+	line-height: 0px;
+	border-radius: 20px;
+	border: #FF8A05 1px solid;
+    margin-left: 20px;
+}
+
+.cr_title{
+    margin-left: 10px;
+}
+
+/*---------------*/
+.radio label, .checkbox label {
+    padding-left: 10px;
+}
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+
+
+
+
+
+
+/*---------------*/
+.total_price{
+	width: 100%;
+	padding: 2vw 3vw 2vw 3vw ;
+	background-color: #fff;
+	margin: 1vh 0vw 1vh 0vw; 
+}
+.totalprice_title{
+	display: inline-block;
+	font-size: 20px;
+}
+.totalprice_money{
+	display: inline-block;
+	font-size: 20px;
+	float: right;
+	color: #D0021B;
+}
+
+.go_action{
+	/*width: 100%;*/
+    padding: 3vh 2vw 3vh 2vw;
+}
+
+.back_buttom{
+	height: 40px; 
+	text-align: center;
+    line-height: 40px;
+	border-radius: 5px;	
+	background-color: #fff;	
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+.pay_buttom{
+	height: 40px;
+	text-align: center;
+    line-height: 40px;
+	border-radius: 5px;	
+	background-color: #FFEB64;	
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+ /* Start by setting display:none to make this hidden.
+     Then we position it in relation to the viewport window
+     with position:fixed. Width, height, top and left speak
+     for themselves. Background we set to 80% white with
+     our animation centered, and no-repeating */
+     
+.loading_modal {
+      display:    none;
+      position:   fixed;
+      z-index:    1000;
+      top:        0;
+      left:       0;
+      height:     100%;
+      width:      100%;
+      background: rgba( 255, 255, 255, .8 ) 
+                  url('../../img/loading.gif') 
+                  50% 50% 
+                  no-repeat;
+  }
+  
+  /* When the body has the loading class, we turn
+     the scrollbar off with overflow:hidden */
+  body.loading .loading_modal {
+      overflow: hidden;   
+  }
+  
+  /* Anytime the body has the loading class, our
+     modal element will be visible */
+  body.loading .loading_modal {
+      display: block;
+  }

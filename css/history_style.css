@@ -1,0 +1,262 @@
+/* Globel */
+*{
+	position: relative;
+	box-sizing: border-box;
+	font-family: Microsoft JhengHei;
+	/*font-family: PingFangTC-Regular;*/
+
+}
+html{
+	height: 100%;
+
+}
+body{
+	font-family: arial;
+	height: 100%;
+}
+a {
+    color: #4A4A4A ;
+    text-decoration: none;
+}
+a:hover {
+    color: #4A4A4A;
+    text-decoration: none;
+}
+.wrapper{
+	height: 100%;
+}
+.main_bg{
+	background: #F5F5F5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* header */
+.header{
+	position: fixed;
+	display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+	top: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #FFEB64;
+	z-index: 10;
+	padding: 10px;
+}
+.title{
+	width: 100%;
+	text-align: center;
+	line-height:40px;
+	font-size: 120%;
+}
+
+.space{
+	height: 60px;
+}
+.space2{
+	height: 70px;
+}
+
+
+.close_box{
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(0%,-50%);
+	height: 60px;
+    width: 60px;
+}
+.close{
+	/*position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);*/
+	height: 60px;
+    width: 60px;
+    opacity: 1;
+    z-index: 10;
+}
+.close_bar{
+	position: absolute;
+	width: 25px;
+	z-index: 100;
+	border-radius: 1.5px;
+	background-color: #FFF;
+	height: 3px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.bar1{
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+.bar2{
+	transform: translate(-50%,-50%) rotate(-45deg);
+}
+/* order box */
+.order_list{
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	/*border-bottom: 1px solid #DADADA;	*/
+	/*background-color: #fff;*/
+}
+.order_box{
+	margin: 0vw 0vw 0vw 0vw;
+}
+.list_title{
+	padding: 2vw 0vw 2vw 0vw;
+}
+.order_card{
+	padding: 2vw 0vw 2vw 2vw;
+	margin: 0vw 0vw 2vw 0vw;
+	border: 1px solid #DADADA;	
+	border-radius: 5px;	
+	background-color: #FFFFFF;
+}
+.cart_card{
+	margin: 0vw 0vw 2vw 0vw;
+	border: 1px solid #DADADA;	
+	border-radius: 5px;	
+	background-color: #FCF6B8;
+}
+.cart_top{
+    padding: 2vw 0vw 2vw 2vw;
+	margin: 0vw 0vw 2vw 0vw;
+}
+.card_left{
+
+}
+.order_date{
+	color: #7F7F7F;	
+	font-size: 13px;	
+	line-height: 18px;
+}
+.rest_name{
+	width: 100%;
+	/* 讓過長溢出的字省略變 ...  */
+	display : block;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+.order_price{
+	padding-top: 2.5vh;
+	color: #DA4C5E;
+	font-size: 16px;
+}
+.card_right{
+	text-align: center;
+}
+.card_bottom{
+    margin: 0px auto;
+    border-top: 1px solid #DADADA;
+    margin-top: 10px;
+}
+.number_title{
+	color: #FF8A05;
+	font-size: 11px;	
+	line-height: 18px;
+}
+.order_number{
+	margin: 0px auto;
+	margin-top: -0.5vh;
+	color: #FF8A05;	
+	font-size: 26px;	
+	font-weight: 500;	
+	line-height: 40px;
+}
+.order_status{
+	margin: 0px auto;
+	margin-top: 0.8vh;
+	width: 50px;
+	color: #7F7F7F;	
+	font-size: 11px;
+	border: 1px solid #7F7F7F;
+	border-radius: 5px;	
+}
+.order_cancel{
+	margin-top: 0.8vh;
+	width: 100px;
+    height: 30px;
+    text-align: left;
+    line-height: 26px;
+	color: #7F7F7F;	
+	font-size: 11px;
+	border: 0px solid #7F7F7F;
+	border-radius: 5px;
+    font-size: 12pt;
+}
+
+
+
+hr{
+	margin-top: 1rem;
+    margin-bottom: 0rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.go_home{
+/*	position: fixed;
+	bottom: 0px;*/
+	width: 100%;
+    padding: 3vh 2vw 3vh 2vw;
+    z-index: 110;
+}
+.home_buttom{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+    line-height: 40px;
+    /*margin: 3vh 2vw 3vh 2vw;*/
+	border-radius: 5px;	
+	background-color: #FFEB64;	
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+.cancel_out_ModalLong{
+    color:#AAAAAA;
+}
+
+.btn_yellow{
+    background: #FFEB64;
+}
+.btn_yellow_cancel_out_ModalLong{
+    width: 100px;
+    background: #FFEB64;
+}
+
+ /* Start by setting display:none to make this hidden.
+     Then we position it in relation to the viewport window
+     with position:fixed. Width, height, top and left speak
+     for themselves. Background we set to 80% white with
+     our animation centered, and no-repeating */
+     
+.loading_modal {
+      display:    none;
+      position:   fixed;
+      z-index:    1000;
+      top:        0;
+      left:       0;
+      height:     100%;
+      width:      100%;
+      background: rgba( 255, 255, 255, .8 ) 
+                  url('../../img/cancel.gif') 
+                  50% 50% 
+                  no-repeat;
+  }
+  
+  /* When the body has the loading class, we turn
+     the scrollbar off with overflow:hidden */
+  body.loading .loading_modal {
+      overflow: hidden;   
+  }
+  
+  /* Anytime the body has the loading class, our
+     modal element will be visible */
+  body.loading .loading_modal {
+      display: block;
+  }

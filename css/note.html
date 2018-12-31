@@ -1,0 +1,106 @@
+//
+
+		$("body").on("touchstart", function(e) {
+		    // 判斷默認行為是否可以被禁用
+		    if (e.cancelable) {
+		        // 判斷默認行為是否已經被禁用
+		        if (!e.defaultPrevented) {
+		            e.preventDefault();
+		        }
+		    }   
+		    //startX = e.originalEvent.changedTouches[0].pageX,
+		    startY = e.originalEvent.changedTouches[0].pageY;
+		    var direction;
+		});
+
+		$("body").on("touchend", function(e) {         
+		    // 判斷默認行為是否可以被禁用
+		    if (e.cancelable) {
+		        // 判斷默認行為是否已經被禁用
+		        if (!e.defaultPrevented) {
+		            e.preventDefault();
+		        }
+		    }               
+		    //moveEndX = e.originalEvent.changedTouches[0].pageX,
+		    moveEndY = e.originalEvent.changedTouches[0].pageY,
+
+		    Y = moveEndY - startY;
+			
+			 if ( Y > 0) {
+		        direction='down';
+		        return direction;
+ 
+		    }
+		    //上滑
+		    else if ( Y < 0 ) {
+		    	direction='up'; 
+		    	return direction;
+
+		    }
+		    //單擊
+		    else{
+		        alert('tap');    
+		    }
+		});
+
+		$(window).scroll(function(){
+			if(status=='firstScrollDone'&&direction=='down'){
+				console.log('還要看');
+			}else{
+				console.log('看前面');
+			}
+		});	
+
+
+
+
+				// When the menu item is clicked, get the #id from the href value, then scroll to the #id element
+        // $(topMenu).on("click", "a", function(e){
+ 
+        // 	var offsetTop = 0;
+        // 	// $('body').remove('<div class="myTest">test</div>');
+        // 	//$(initId).css('margin-top',0);
+        // 	//$("#d1228").css('margin-bottom',0);
+
+        //     var href = $(this).attr("href");
+        //     console.log('href '+href);
+
+
+        //     // $(menuItems)
+        //     // .parent().removeClass("active")
+        //     // .end().filter("[href='"+href+"']").parent().addClass("active");
+           
+        //     //offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-45;
+            
+
+        //    if(offsetTop<0){
+        //    		// $("#d1224").css('margin-top',95);
+        //    }
+        //    if($(document).height()>=$('body').prop('scrollHeight')){
+        //    		 // $('body').append('<div class="myTest">test</div>');
+        //    		//$("#d1228").css('margin-bottom',$(window).height()-95);
+        //    		//$('body').css('padding-bottom',$(window).height()-95);
+        //    		//offsetTop=$(document).height()-$("#d1228").height()+95;
+        //    		console.log('bottom');
+
+        //    }  
+        //    if($("#d1228").height()+topMenuHeight+45<$(window).height()){
+        //    		//console.log('not enough');
+        //    		$('body').css('padding-bottom',$(window).height()-$("#d1228").height()-topMenuHeight-45);
+        //    } 
+        //    //var offsetThis=$(href).offset().top-95; 
+
+        //    if($(window).scrollTop()==offsetThis){
+        //    		console.log('same');
+
+        //    }
+
+        //      //var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-$('.header').height()-$('.location').height()-topMenuHeight;
+
+        //     // $('html, body').stop().animate({ 
+        //     //     scrollTop: offsetTop
+        //     // }, 300);
+        //     // e.preventDefault();
+
+        // });
+
